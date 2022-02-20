@@ -34,7 +34,7 @@ public class Modulo {
                 while(dias > 0){            // LOOP PARA ADICIONAR SOMENTE DIAS ÚTEIS
                     --dias;
                     prazoLimite = prazoLimite.plusDays(1);
-                    if (prazoLimite.getDayOfWeek() != DayOfWeek.SATURDAY && prazoLimite.getDayOfWeek() != DayOfWeek.SUNDAY) {
+                    if (prazoLimite.getDayOfWeek() == DayOfWeek.SATURDAY || prazoLimite.getDayOfWeek() == DayOfWeek.SUNDAY) {
                         ++dias;
                     }
                 }
